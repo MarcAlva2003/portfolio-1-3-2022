@@ -1,0 +1,470 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px; /*1rem = 10px*/
+    transition: all .8s linear;
+    background-color: black;
+    font-family: 'Raleway', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a{
+    margin: 0;
+    padding: 0;
+}
+.pantalla{
+    padding-top: 9rem;
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+.element-color-white{
+    color: #fff;
+    transition: color .8s linear;
+}
+.element-color-black{
+    color: #000;
+}
+.w100{
+    font-weight: 100;
+}
+.w200{
+    font-weight: 200;
+}
+.w400{
+    font-weight: 400;
+}
+.w600{
+    font-weight: 600;
+}
+
+img{
+    width: 100%;
+}
+
+/*HEADER*/
+.header{
+    padding: 0 2rem;
+    background-color: transparent;
+    height: 8rem;
+    width: 100%;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.header-section{
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-section nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.brand{
+    font-size: 1.8rem;
+}
+.nav-item{
+    font-size: 1.2rem;
+}
+@media (min-width: 768px){
+    .brand{
+        font-size: 3rem;
+    }
+    .header{
+        padding: 0 4rem;
+        height: 10rem;
+        grid-template-columns: 3fr 2fr;
+
+    }
+    .header-section{
+        height: 10rem;
+    }
+    .nav-item{
+        font-size: 2rem;
+    }
+}
+
+/*PANTALLA 1*/
+.pantalla-1-content{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+}
+.titulo-especialidad{
+    animation: aparicionTituloEspecialidad 1.5s ease;
+    font-size: 2.8rem;
+}
+@media (min-width: 992px){
+    .pantalla-1-content{
+        width: 80%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1;
+        padding-top: 3rem;
+    }
+    .title-icons-container{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media (min-width: 1250px){
+    .titulo-especialidad{
+        font-size: 3.6rem
+    }
+}
+.pantalla-1-block__img{
+    width: 60%;
+    margin: 6vh auto 3vh;
+    text-align: center;
+}
+.pantalla-1-block__title{
+    width: 90%;
+    margin: 3vh auto;
+}
+.pantalla-1-block__iconos{
+    width: 90%;
+    margin: 0 auto;
+}
+.icono-estudio{
+    width: 3.8rem;
+    margin-right: 1rem;
+}
+.icono-estudio:last-child{
+    margin-right: 0;
+}
+
+/*PANTALLA - 2*/
+.pantalla-2-content{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 13% 74% 13%;
+}
+.scroll-a-izq,
+.scroll-a-der{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scroll-a-izq:hover,
+.scroll-a-der:hover{
+    cursor: pointer;
+}
+/*PROYECTOS*/
+.proyectos-content{
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+@media (min-width: 992px){
+    .proyectos-content{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+.proyecto-img{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.proyecto-info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.proyecto-info *{
+    text-align: center;
+}
+.proyecto-info .button{
+    padding: 1.2rem 4rem;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: .3rem;
+    border: 1px solid #fff;
+
+}
+.proyecto-info .button:hover{
+    cursor: pointer;
+}
+.proyecto-info .button:active{
+    background-color: rgb(46, 46, 46);
+
+}
+.proyecto-img img{
+    width: 90%;
+    max-width: 32rem;
+}
+@media (min-width: 992px){
+    .proyecto-img img{
+        max-width: 100%;
+    }
+}
+
+/*SECCION 3*/
+
+.pantalla-3-content{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 4fr 7fr;
+}
+@media (min-width: 768px){
+    .pantalla-3-content{
+        grid-template-rows: 1fr;
+        grid-template-columns: 2fr 3fr;
+    }
+}
+.sobre-mi-img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sobre-mi-img-container{
+    width: 50%;
+    max-width: 25.4rem;
+    background-color: #2c2c2c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #fff; */
+    animation: imagenFlotante 7s linear infinite;
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.75);
+}
+@media (min-width: 768px){
+    .sobre-mi-img-container{
+        min-width: 22rem;
+        max-width: 80%;
+    }
+}
+@media (min-width: 992px){
+    .sobre-mi-img-container{
+        min-width: 30rem;
+        max-width: 100%;
+    }
+}
+.sobre-mi-img-container img{
+    border-radius: 50%;
+}
+.sobre-mi-info{
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (min-width: 992px){
+    .sobre-mi-info{
+        width: 80%;
+    }
+}
+.sobre-mi-info h2{
+    padding-bottom: 3rem;
+    font-size: 3.6rem;
+}
+@media (min-width: 768px){
+    .texto-sobre-mi{
+        line-height: 2;
+    }
+}
+
+
+/*SECCION 4*/
+.pantalla-4-content{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 992px){
+    .pantalla-4-content{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+.medio-contacto{
+    background-color: white;
+    width: 90%;
+    max-width: 19rem;
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+}
+.medio-contacto:hover{
+    cursor: pointer;
+}
+.medio-contacto p{
+    color: #000;
+}
+#email-a-copiar{
+    border: transparent;
+}
+/*Animacion de aparición de elemntos*/
+.imagen-inicio{
+    animation: apararicionHaciaArriba 1.5s ease;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 32rem;
+}
+
+@keyframes apararicionHaciaArriba {
+    0%{
+        opacity: 0;
+        transform: translateY(15rem);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes imagenFlotante {
+    25%{
+        transform: translateY(-1rem);
+    }
+    75%{
+        transform: translateY(1rem);
+    }
+}
+@keyframes aparicionTituloEspecialidad {
+    0%{
+        opacity: 0;
+        transform: translateY(15rem);
+    }
+    20%{
+        opacity: 0;
+        transform: translateY(15rem);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+.icono-estudio-1{
+    animation: entradaIconos 1.6s ease; 
+}
+.icono-estudio-2{
+    animation: entradaIconos 1.8s ease;
+}
+.icono-estudio-3{
+    animation: entradaIconos 2s ease;
+}
+.icono-estudio-4{
+    animation: entradaIconos 2.2s ease;
+}
+.icono-estudio-5{
+    animation: entradaIconos 2.4s ease;
+}
+@keyframes entradaIconos {
+    0%{
+        opacity: 0;
+        transform: translateY(15rem);
+    }
+    30%{
+        opacity: 0;
+        transform: translateY(15rem);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+@keyframes aparicionElemento{
+    0%{
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes desaparicionElemento{
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+}
+@keyframes resetearAnimacion{
+    
+}
+
+/*COHETE*/
+.icono-cohete{
+    position: fixed;
+    left: -4rem;
+    top: 80vh;
+    transform: rotate(45deg);
+    animation: movimientoCohete 10s linear infinite;
+}
+#icon-tabler-rocket{
+    transition: stroke .8s linear;
+}
+@keyframes movimientoCohete{
+    0%{
+        left: -4rem;
+    top: 80vh;
+    transform: rotate(45deg);
+    }
+    25%{
+        left: 100%;
+        top: 40vh;
+        transform: rotate(30deg);
+    }
+    50%{
+        top: 80vh;
+        left: 100%;
+        transform: rotate(225deg);
+    }
+    75%{
+        left: -4rem;
+        top: 60vh;
+        transform: rotate(240deg);
+    }
+    100%{
+        transform: rotate(240deg);
+
+    }
+}
